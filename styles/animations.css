@@ -1,11 +1,116 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+.sparks {
+  opacity: 0;
+}
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+.core {
+  transition: fill 0.3s 0.03s;
+  fill: var(--bg-color, #fff);
+}
 
-*/
+.main-body {
+  transition: fill 0.3s 0.05s;
+  fill: var(--bg-color, #fff);
+}
+
+.heart {
+  transform-origin: center;
+}
+
+.like-icon:hover .core {
+  transition-delay: 0s;
+  fill: var(--contour-color);
+}
+
+.like-icon:hover .main-body {
+  transition-delay: 0.05s;
+  fill: var(--contour-color);
+}
+
+.like-icon .core {
+  transition-delay: 0.03s;
+}
+
+.like-icon .main-body {
+  transition-delay: 0s;
+}
+
+.like-icon:active .core {
+  transition-delay: 0s;
+  fill: var(--animation-fill-color);
+}
+
+.like-icon:active .main-body {
+  transition-delay: 0.05s;
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .core {
+  transition-delay: 0s;
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .main-body {
+  transition-delay: 0.05s;
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .contour {
+  transition: fill 0.3s 0.06s;
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .heart {
+  animation: scale-heart 0.3s 0.1s ease-in;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-opacity 0.3s 0.3s ease-in;
+}
+
+.like-icon .contour {
+  transition: fill 0.1s linear;
+  fill: var(--heart-contour);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--text-color, #000);
+  transition: box-shadow 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--text-color, #000);
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+@keyframes scale-heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparks-opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
