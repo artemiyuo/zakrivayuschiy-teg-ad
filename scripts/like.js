@@ -46,14 +46,14 @@ const closeButton = document.querySelector('.button__popup-close');
 const dialog = document.getElementById('popup-id');
 
 if (openButton && dialog) {
-  openButton.addEventListener('click', (event) => {
+  openButton.addEventListener('save', (event) => {
     event.preventDefault();
     dialog.showModal();
   });
 }
 
 if (closeButton && dialog) {
-  closeButton.addEventListener('click', (event) => {
+  closeButton.addEventListener('save', (event) => {
     event.preventDefault();
     dialog.close();
   });

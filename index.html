@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
     <link rel="icon" href="./svg/favicon.svg" type="svg/svg+xml" />
+    <link rel="icon" href="./svg/save.svg" type="svg/svg+xml" />
     <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
@@ -564,21 +565,21 @@
           fill="current-color"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use href="svg/floppy.svg#floppy"></use>
+          <use href="svg/save.svg#save"></use>
         </svg>
-        <span class="button__text">Сохранить на память</span>
+        <span class="save">Сохранить на память</span>
       </button>
       <dialog id="popup-id" class="popup">
         <div class="popup__text-open">
           <svg
-            class="floppy"
+            class="save"
             width="40"
             height="40"
             viewBox="0 0 40 40"
             fill="current-color"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <use href="svg/floppy.svg#floppy"></use>
+            <use href="svg/save.svg#save"></use>
           </svg>
           <p class="text__popup">Вставьте дискету, чтобы продолжить</p>
         </div>
@@ -588,7 +589,7 @@
           onclick="window['popup-id'].close(); return false;"
           aria-controls="popup-id"
         >
-          <span class="button__text">ок</span>
+          <span class="save">ок</span>
         </button>
       </dialog>
     </main>
