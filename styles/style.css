@@ -57,7 +57,7 @@
 
 .card__item {
   background-color: var(--bg-color);
-  max-inline-size: 698px;
+  max-inline-size: 696px;
 }
 
 .card__image {
@@ -67,7 +67,6 @@
   object-fit: cover;
   object-position: center;
 }
-
 
 .image__wrapper {
   position: relative;

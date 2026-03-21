@@ -39,3 +39,22 @@ function setButtonText(heart, button) {
     );
   }
 }
+
+// Кнопка "Сохранить на память"
+const openButton = document.querySelector('.button__popup-open');
+const closeButton = document.querySelector('.button__popup-close');
+const dialog = document.getElementById('popup-id');
+
+if (openButton && dialog) {
+  openButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    dialog.showModal();
+  });
+}
+
+if (closeButton && dialog) {
+  closeButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    dialog.close();
+  });
+}
