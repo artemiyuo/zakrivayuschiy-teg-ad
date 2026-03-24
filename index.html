@@ -554,7 +554,6 @@
       <button
         class="button__popup-open button"
         type="button"
-        onclick="window['popup-id'].showModal(); return false;"
         aria-controls="popup-id"
       >
         <svg
@@ -586,7 +585,6 @@
         <button
           class="button__popup-close button"
           type="button"
-          onclick="window['popup-id'].close(); return false;"
           aria-controls="popup-id"
         >
           <span class="icon-floppy">ок</span>
@@ -594,5 +592,27 @@
       </dialog>
     </main>
     <script src="./scripts/like.js"></script>
+    <script>
+  (function() {
+    const dialog = document.getElementById('popup-id');
+    const openBtn = document.querySelector('.button__popup-open');
+    const closeBtn = document.querySelector('.button__popup-close');
+
+    if (openBtn && dialog) {
+      openBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        dialog.showModal();
+      });
+    }
+
+    if (closeBtn && dialog) {
+      closeBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        dialog.close();
+      });
+    }
+  })();
+</script>
+
   </body>
 </html>
